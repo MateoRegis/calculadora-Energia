@@ -1,0 +1,267 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: "Dosis", sans-serif;
+}
+
+.wrapper {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+header {
+  height: 12vh;
+  background-color: #005da2;
+  display: flex;
+  box-shadow: 0px 0px 5px;
+  margin: 0.5em;
+  padding: 0.5em;
+  border-radius: 3px;
+  align-items: center;
+  justify-content: left;
+}
+
+.logo {
+  height: 10vh;
+}
+
+.logo a:hover {
+  cursor: pointer;
+}
+
+body {
+  background: lightgray;
+}
+
+main {
+  height: 30vh;
+  align-self: center;
+  justify-content: center;
+  font-size: 90%;
+}
+
+.form-container {
+  display: flex;
+  width: 30em;
+  height: 47em;
+  margin: 1em;
+  background-color: white;
+  color: black;
+  border-radius: 20px;
+  padding: 2em;
+  box-shadow: 0px 0px 5px rgb(143, 138, 138);
+  text-align: left;
+}
+
+.form-container div {
+  background-color: #005da2;
+  color: white;
+  font-weight: 400;
+  padding: 0.5em;
+  border-radius: 2.5px;
+}
+
+.form-container .item-form {
+  font-size: 1.25em;
+  margin-top: 1.5em;
+  text-align: left;
+  text-transform: uppercase;
+}
+
+.form-container h3 {
+  font-size: 2em;
+  text-shadow: 1px 1px lightgray;
+}
+
+.form-container .output-box {
+  display: flex;
+  align-items: baseline;
+  background-color: white;
+  justify-content: space-between;
+  padding: 1px;
+  border-top: solid lightgray;
+}
+
+#output-text {
+  display: block;
+  color: #005da2;
+  font-size: 1.25em;
+  font-weight: 500;
+  text-shadow: 1px 1px lightgray;
+}
+
+.output {
+  color: #005da2;
+  font-size: 1.75em;
+  font-weight: 600;
+  text-shadow: 1px 1px lightgray;
+}
+/* Efectos de sombra y transición para inputs y botones */
+input[type="radio"],
+input[type="number"],
+select,
+.btn-submit {
+  transition: all 0.3s ease;
+  box-shadow: 0 2px 4px rgba(0, 93, 162, 0.2);
+}
+
+input[type="radio"]:hover,
+input[type="number"]:hover,
+select:hover,
+.btn-submit:hover {
+  box-shadow: 0 4px 8px rgba(0, 93, 162, 0.4);
+}
+
+input[type="number"]:focus,
+select:focus {
+  box-shadow: 0 4px 8px rgba(0, 93, 162, 0.6);
+  border: 2px solid #005da2; /* Resalta más el borde al enfocar */
+}
+/* Personalización de radio buttons */
+.input-radio {
+  appearance: none;
+  background-color: #fff;
+  border: 2px solid #ccc;
+  padding: 5px;
+  border-radius: 50%;
+  display: inline-block;
+  position: relative;
+}
+
+.input-radio:checked {
+  background-color: #005da2;
+  border-color: #005da2;
+}
+
+.input-radio:checked::after {
+  content: "";
+  position: absolute;
+  top: 2px;
+  left: 2px;
+  width: 10px;
+  height: 10px;
+  border-radius: 50%;
+  background: white;
+}
+/* Mejoras en la legibilidad de la tipografía */
+h3,
+.item-form,
+.output,
+#output-text {
+  text-shadow: none;
+  color: #333;
+}
+.input:hover {
+  box-shadow: 0px 0px 5px #005da2;
+  cursor: pointer;
+  border-color: #005da2;
+  border-radius: 4px;
+}
+.input:focus {
+  outline: none;
+}
+
+.input-radio:hover {
+  cursor: pointer;
+  border-color: #005da2;
+}
+
+.input-box:hover {
+  box-shadow: 0px 0px 5px #005da2;
+  border-color: #005da2;
+  border-radius: 4px;
+}
+
+.input-box:focus {
+  box-shadow: 0px 0px 5px #005da2;
+  border-color: #005da2;
+  border-radius: 4px;
+  outline: none;
+}
+
+.btn-submit {
+  font-weight: 500;
+  font-size: 1.25em;
+  padding: 0.5em;
+  margin-top: 1.5em;
+  border-radius: 4px;
+}
+
+.btn-submit:hover {
+  box-shadow: 0px 0px 5px #005da2;
+  color: white;
+  background-color: #005da2;
+  cursor: pointer;
+  border-color: #005da2;
+  border-radius: 4px;
+  transition: all 100ms ease-in-out;
+  outline: none;
+}
+footer {
+  display: flex;
+  background-color: #005da2;
+  color: white;
+  height: 14vh;
+  margin: 0.5em;
+  padding: 0.5em;
+  align-items: center;
+  justify-content: space-evenly;
+  box-shadow: 0px 0px 7px rgb(82, 81, 81);
+  border-radius: 3px;
+  text-transform: uppercase;
+  text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+
+.nombre-empresa {
+  font-size: 1.25em;
+  font-weight: 400;
+  text-shadow: 0px 0px 5px rgb(19, 19, 18);
+}
+
+@media screen and (min-width: 280px) and (max-width: 653px) {
+  header {
+    height: 50px;
+  }
+
+  .logo {
+    height: 40px;
+  }
+
+  main {
+    font-size: 55%;
+  }
+
+  .form-container {
+    height: 60vh;
+  }
+}
+
+@media screen and (min-width: 768px) and (max-width: 1024px) {
+  header {
+    height: 70px;
+  }
+
+  .logo {
+    height: 60px;
+  }
+
+  main {
+    font-size: 75%;
+  }
+}
+
+@media screen and (min-width: 1024px) and (max-width: 1366px) {
+  header {
+    height: 80px;
+  }
+
+  .logo {
+    height: 75px;
+  }
+
+  main {
+    font-size: 75%;
+  }
+}

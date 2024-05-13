@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Calculadora EPE</title>
+    <script src="js/index.js" defer></script>
+    <link rel="stylesheet" href="css/index.css" />
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Dosis:wght@200;300;400;500&display=swap");
+    </style>
+  </head>
+
+  <div class="wrapper">
+    <header>
+      <a href="https://www.epe.santafe.gov.ar/institucional/" target="_blank" rel="noopener noreferrer" class="logo"
+        ><img src="img/imagen3.jpg" alt="logo" class="logo"
+      /></a>
+    </header>
+
+    <body>
+      <main class="form-container">
+        <form name="calculadora">
+          <h3>CALCULADORA DE COSTO DE ENERGÍA ELÉCTRICA</h3>
+          <div class="item-form">Tipo de usuario</div>
+          <input
+            id="tipo-usuario"
+            class="item-form input-radio"
+            type="radio"
+            name="tipo-de-usuario"
+            value="residencial"
+            checked
+          />
+          <label class="item-form" for="residencial"
+            >Residencial (aplica IVA 21%)</label
+          >
+          <br />
+          <input
+            id="tipo-usuario"
+            class="item-form input-radio"
+            type="radio"
+            name="tipo-de-usuario"
+            value="industrial"
+          />
+          <label class="item-form" for="Industrial"
+            >Industrial (aplica IVA 27%)</label
+          >
+
+          <div class="item-form">Zona del domicilio</div>
+          <select
+            class="item-form input"
+            name="selector"
+            id="zona-domicilio"
+            required
+          >
+            <option value="" selected="selected" disabled="disabled">
+              --Seleccione su zona--
+            </option>
+            <option value="centro">DISTRITO CENTRO ($5,80 por kWh)</option>
+            <option value="oeste">DISTRITO OESTE ($5,35 por kWh)</option>
+            <option value="norte">DISTRITO NORTE ($5,60 por kWh)</option>
+            <option value="sur">DISTRITO SUR ($5,40 por kWh)</option>
+          </select>
+          <div class="item-form">Cantidad de kWh del mes</div>
+          <input
+            type="number"
+            class="item-form input-box"
+            id="input-consumo"
+            placeholder="kWh"
+            required
+          />
+          <br />
+          <input
+            id="btn-submit"
+            class="btn-submit"
+            type="button"
+            value="CALCULAR"
+            onclick="calculadora()"
+          />
+          <br /><br />
+          <div class="output-box">
+            <span id="output-text"></span>
+            <p class="output" id="costo-total"></p>
+          </div>
+        </form>
+      </main>
+    </body>
+    <footer class="footer-container">
+      <div class="div-footer">
+        <a href="https://www.epe.santafe.gov.ar/institucional/" target="_blank" rel="noopener noreferrer" class="logo-footer"
+        ><img src="img/logo_2.jpg" alt="logo_2" class="logo"
+      /></a>
+      </div>
+      <div class="div-footer">
+        <p class="nombre-empresa">© 2021 Empresa Provincial de la Energía de Santa Fe
+        </p></section>
+      </div>
+      <div class="div-footer">
+        <a href="http://www.santafe.gov.ar/index.php/web" target="_blank" rel="noopener noreferrer" class="logo-footer"
+        ><img src="img/logo_3.jpg" alt="logo_3" class="logo"
+      /></a>
+      </div>
+    </footer>
+  </div>
+</html>
